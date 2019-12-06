@@ -24,23 +24,21 @@ export default {
     },
     methods:{
         handleScroll(){
-            let top=document.documentElement.scrollTop;
+            let top=document.documentElement.scrollTop||window.pageYOffset;
             if(top>60){
                 let opacity=top/140;
                 opacity=opacity>1 ? 1 : opacity
-                this.opacityStyle={
-                    opacity
-                }
+                this.opacityStyle.opacity=opacity;
                 this.showAbs=false;
             }else{
                 this.showAbs=true;
             }
         }
     },
-    activated(){
+    mounted(){
         window.addEventListener('scroll',this.handleScroll);
     },
-    deactivated(){
+    destroyed(){
         window.removeEventListener('scroll',this.handleScroll);
     }
 }
