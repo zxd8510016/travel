@@ -1,16 +1,14 @@
 <template>
   <div id="app">
-    <router-view/>
+    <keep-alive exclude="Detail">
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 
 <script>
-import Home from './pages/home'
 export default {
-  name: 'App',
-  components:{
-    Home
-  }
+  name: 'App'
 }
 </script>
 

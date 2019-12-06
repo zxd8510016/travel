@@ -11,6 +11,10 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper)
 
+import Axios from 'axios'
+Vue.prototype.$axios = Axios
+import store from './store'
+
 fastClick.attach(document.body)
 
 Vue.config.productionTip = false
@@ -19,6 +23,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
