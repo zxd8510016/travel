@@ -60,7 +60,7 @@ export default {
 		right: 0;
 		bottom: 0.44rem;
 		box-sizing: border-box;
-		padding: 0.2rem;
+		padding: 0.1rem;
 		img {
 			height: 100%;
 			margin: 0 auto;
